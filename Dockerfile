@@ -1,3 +1,7 @@
-FROM debian:jessie
+FROM python:3.12-alpine
 
-CMD ["echo", "Imagen vulnerable"]
+WORKDIR /app
+
+COPY app.py .
+
+CMD ["python", "app.py"]
